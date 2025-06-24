@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lins Contra a Dengue</title>
+    
+    <!-- Importação de ícones e fontes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap">
+    
+    <style>
+        /* Configuração geral */
+        html, body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            box-sizing: border-box;
+            background-color: #f1f1f1;
+            color: #333;
+            line-height: 1.8;
+        }
+
+        *, *::before, *::after {
+            box-sizing: inherit;
+        }
+
+        /* Cabeçalho */
+        .top-box {
+            width: 100%;
+            height: 100px;
+            background: linear-gradient(90deg, #0033cc, #007bff);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            color: white;
+            font-size: 22px;
+            font-weight: bold;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .top-box img {
+            height: 80px;
+            margin-right: 20px;
+        }
+
+        /* Botão de login */
+        .login-icon {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .login-icon:hover {
+            background-color: rgba(255, 255, 255, 0.4);
+            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Menu de navegação */
+        .menu {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            background-color: #ff4444;
+            padding: 15px;
+            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform 0.2s ease, color 0.2s ease;
+        }
+
+        .menu a:hover {
+            transform: scale(1.1);
+            color: #ffcc00;
+        }
+
+        .menu a i {
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
+
+        /* Área principal */
+        main {
+            padding: 20px;
+            max-width: 850px;
+            margin: 0px auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0px 4px 8px rgba(222, 8, 8, 0.828);
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        section h2 {
+            font-size: 24px;
+            color: #007bff;
+        }
+
+        /* Lista de sintomas e prevenção */
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            padding: 8px;
+            background-color: #f8f9fa;
+            margin-bottom: 5px;
+            border-left: 5px solid #007bff;
+        }
+
+        /* Botão de denúncia */
+        .report-btn {
+            display: inline-block;
+            background-color: #ff4444;
+            color: white;
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .report-btn:hover {
+            background-color: #7a00cc;
+        }
+
+        /* Rodapé */
+        footer {
+            width: 100%;
+            text-align: center;
+            padding: 15px;
+            background-color: #333;
+            color: white;
+            font-size: 14px;
+        }
+
+        /* Estilos responsivos para telas menores */
+        @media (max-width: 600px) {
+            .menu {
+                flex-direction: column;
+                align-items: center;
+                gap: 1px;
+            }
+
+            .menu a {
+                font-size: 12px;
+            }            
+
+            .top-box {
+                flex-direction: column;
+                height: auto;
+                padding: 10px;
+                text-align: center;
+            }
+
+            .top-box img {
+                margin: 8px 0;
+            }            
+
+            .login-icon {
+                margin-top: 10px;
+            }
+
+
+            main {
+                padding: 15px;
+                max-width: 90%;
+                border-radius: 15px;
+            }
+
+            .report-btn {
+                width: 80%;
+                text-align: center;
+                font-size: 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .top-box {
+                flex-direction: column;
+                height: auto;
+                text-align: center;
+                font-size: 18px;
+                padding: 10px;
+            }
+
+            .top-box img {
+                margin: 10px 0;
+            }
+
+            .login-icon {
+                margin-top: 8px;
+            }
+
+            .menu{
+                font-size: 14px;
+            }
+
+            main {
+                max-width: 80%;
+                padding: 10px;
+            }
+            
+            .menu a {
+                font-size: 14px;
+            }
+
+            .report-btn {
+                width: 90%;
+                text-align: center;
+                font-size: 16px;
+            }
+        }
+
+         /* Responsividade para tablets */
+         @media (max-width: 1024px) {
+            .top-box {
+                flex-direction: column;
+                height: auto;
+                text-align: center;
+                font-size: 18px;
+                padding: 10px;
+            }
+
+            .top-box img {
+                margin: 10px 0;
+            }
+
+            .menu a {
+                flex-direction: column;
+                gap: 20px;
+                align-items: center;
+            }
+
+            main {
+                max-width: 95%;
+                padding: 20px;
+            }
+
+            .login-form input,
+            .login-form button {
+                font-size: 16px;
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <div class="top-box">
+        <img src="logoprefeitura.png" alt="Prefeitura de Lins">
+        LINS CONTRA A DENGUE 
+        
+        <a href="login.html" class="login-icon">
+            <i class="fas fa-user"></i> Login
+        </a>
+    </div>
+
+    <!-- Menu de navegação -->
+    <nav class="menu">
+        <a href="index.html"><i class="fas fa-home"></i> Início</a>
+        <a href="informacoes.html"><i class="fas fa-info-circle"></i> Informações</a>
+        <a href="denuncia.html"><i class="fas fa-exclamation-triangle"></i> Denúncia</a>
+        <a href="contatos.html"><i class="fas fa-phone"></i> Contato</a>
+    </nav>
+
+        <!-- Conteúdo principal -->
+        <main>
+            <section>
+                <h2>O que é a Dengue?</h2>
+                <p>A dengue é uma doença viral transmitida pelo <strong>mosquito Aedes aegypti</strong>. Ela pode causar febre alta, dores no corpo e, em casos graves, complicações mais sérias.</p>
+            </section>
+
+            <section>
+                <h2>Sintomas</h2>
+                <ul>
+                    <li>Febre alta</li>
+                    <li>Dores musculares e nas articulações</li>
+                    <li>Dor atrás dos olhos</li>
+                    <li>Manchas vermelhas na pele</li>
+                    <li>Náusea e vômitos</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Denúncia de Focos</h2>
+                <p>Ajude a combater a dengue denunciando locais com água parada.</p>
+                <a href="denuncia.html" class="report-btn">Denunciar Foco</a>
+            </section>
+        </main>
+
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2025 - Informações sobre a Dengue | Campanha de Conscientização</p>
+    </footer>
+
+</body>
+</html>
