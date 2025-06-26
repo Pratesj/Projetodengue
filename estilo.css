@@ -1,0 +1,475 @@
+  html, body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            box-sizing: border-box;
+            background-color: #f1f1f1;
+            color: #333;
+            line-height: 1.8;
+        }
+
+        *, *::before, *::after {
+            box-sizing: inherit;
+        }
+
+        /* Cabeçalho */
+        .top-box {
+            width: 100%;
+            height: 100px;
+            background: linear-gradient(90deg, #0033cc, #007bff);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            color: white;
+            font-size: 22px;
+            font-weight: bold;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .top-box img {
+            height: 80px;
+            margin-right: 20px;
+        }
+
+        /* Botão de login */
+        .login-icon {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .login-icon:hover {
+            background-color: rgba(255, 255, 255, 0.4);
+            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Menu de navegação */
+        .menu {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            background-color: #ff4444;
+            padding: 15px;
+            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform 0.2s ease, color 0.2s ease;
+        }
+
+        .menu a:hover {
+            transform: scale(1.1);
+            color: #ffcc00;
+        }
+
+        .menu a i {
+            font-size: 28px;
+            margin-bottom: 5px;
+
+        }
+
+        /* Área principal */
+        main {
+            padding: 20px;
+            max-width: 850px;
+            margin: 0px auto;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0px 4px 8px rgba(222, 8, 8, 0.828);
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        section h2 {
+            font-size: 24px;
+            color: #007bff;
+        }
+
+        /* Lista de sintomas e prevenção */
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            padding: 8px;
+            background-color: #f8f9fa;
+            margin-bottom: 5px;
+            border-left: 5px solid #007bff;
+        }
+
+        /* Botão de denúncia */
+        .report-btn {
+            display: inline-block;
+            background-color: #ff4444;
+            color: white;
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .report-btn:hover {
+            background-color: #7a00cc;
+        }
+
+        /* Rodapé */
+        footer {
+            width: 100%;
+            text-align: center;
+            padding: 15px;
+            background-color: #333;
+            color: white;
+            font-size: 14px;
+        }
+
+        /*PAGINA INFORMAÇÕES*/
+
+         .layout {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 80%;
+    }
+     .info-img {
+      display: block;
+      width: 100%;
+      max-width: 500px;
+      height: 500px;
+      object-fit: cover;
+      margin: 0 auto 10px auto;
+      border-radius: 10px;
+    }
+
+    /*PAGINA LOGIN*/
+     .mainlogin {
+            padding: 20px;
+            max-width: 800px;
+            margin: 50px auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .login-form h2 {
+            color: #007bff;
+        }
+
+        .login-form input {
+            width: 90%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .login-form button {
+            width: 100%;
+            padding: 12px;
+            background-color: #ff4444;
+            color: white;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .login-form button:hover {
+            background-color: #cc0000;
+        }
+
+        .login-form p {
+            margin-top: 15px;
+        }
+
+        .login-form a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /*PAGINA DENUNCIA*/
+
+        .denuncia-form h2 {
+            color: #007bff;
+        }
+    
+        .denuncia-form input,
+        .denuncia-form textarea {
+        
+            width: 100%;
+            padding: 06px;
+            margin: 20px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .denuncia-form textarea {
+            resize: none;
+            height: 120px;
+        }
+
+        .denuncia-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #ff4444;
+            color: white;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .denuncia-form button:hover {
+            background-color: #cc0000;
+        }
+
+        /*PAGINA CADASTRO*/
+
+        .maincadastro {
+            padding: 20px;
+            max-width: 800px;
+            margin: 50px auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        .register-form h2 {
+            color: #007bff;
+        }
+
+        .register-form input {
+            width: 90%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .register-form button {
+            width: 100%;
+            padding: 12px;
+            background-color: #ff4444;
+            color: white;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .register-form button:hover {
+            background-color: #cc0000;
+        }
+
+        /* Link para login */
+
+        .register-form p {
+            margin-top: 15px;
+        }
+        .register-form a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /*PAGINA CONTATOS*/
+
+        .sessaocontatos h2 {
+            font-size: 24px;
+            color: #007bff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .contact-info p {
+            font-size: 18px;
+        }
+
+        /* Estilos responsivos para telas menores */
+
+        @media (max-width: 600px) {
+            .menu {
+                flex-direction: column;
+                align-items: center;
+                gap: 1px;
+            }
+            .menu a {
+                font-size: 12px;
+            }            
+            .top-box {
+                flex-direction: column;
+                height: auto;
+                padding: 10px;
+                text-align: center;
+            }
+            .top-box img {
+                margin: 8px 0;
+            }            
+            .login-icon {
+                margin-top: 10px;
+            }
+            .layout {
+                margin: 10px auto;
+            }
+            .info-img {
+               height: auto;
+               max-width: 90%;
+            }
+            main {
+                padding: 15px;
+                max-width: 90%;
+                border-radius: 15px;
+            }
+            .report-btn {
+                width: 80%;
+                text-align: center;
+                font-size: 12px;
+            }
+            .mainlogin {
+                max-width: 90%;
+                padding: 15px;
+            }
+            .mainlogin {
+                max-width: 80%;
+                padding: 10px;
+            }
+            .login-form input,
+            .login-form button {
+                font-size: 16px;
+                padding: 14px;
+            }
+            .register-form input,
+            .register-form button {
+                font-size: 16px;
+                padding: 14px;
+            }
+            
+        }
+
+        @media (max-width: 480px) {
+            .top-box {
+                flex-direction: column;
+                height: auto;
+                text-align: center;
+                font-size: 18px;
+                padding: 10px;
+            }
+            .top-box img {
+                margin: 10px 0;
+                height: 60px;
+            }
+            .login-icon {
+                margin-top: 8px;
+            }
+            .menu{
+                display: block;
+                font-size: 14px;
+            }
+            main {
+                max-width: 80%;
+                padding: 10px;
+            }
+            .menu a {
+                font-size: 14px;
+            }
+           
+            .report-btn {
+                width: 90%;
+                text-align: center;
+                font-size: 16px;
+            }
+             .mainlogin {
+                max-width: 80%;
+                padding: 10px;
+            }
+            .login-form input,
+            .login-form button {
+                font-size: 14px;
+                padding: 10px;
+            }
+        }
+
+         /* Responsividade para tablets */
+         @media (max-width: 1024px) {
+            .top-box {
+                flex-direction: row;
+                justify-content: space-around;
+                height: auto;
+                text-align: center;
+                font-size: 18px;
+                padding: 10px;
+            }
+            .login-icon{
+                font-size: 15px;
+            }
+            .top-box img {
+                margin: 10px 0;
+            }
+            .menu{
+                display: block;
+                padding: 0;
+            }
+            .menu a {
+                flex-direction: column;
+                gap: 10px;
+                align-items: center;
+                 border-bottom: 3px solid rgb(150, 22, 22);
+            }
+            .menu a:last-child{
+                border-bottom: none;
+            }
+            
+            main {
+                max-width: 95%;
+                padding: 20px;
+            }
+            .mainlogin {
+                max-width: 90%;
+                padding: 10px;
+            }
+            .maincadastro{
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+            .login-form input,
+            .login-form button {
+                font-size: 16px;
+                padding: 12px;
+            }
+           
+        }

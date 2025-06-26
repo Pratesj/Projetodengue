@@ -8,253 +8,7 @@
     <!-- Importação de ícones e fontes -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap">
-    
-    <style>
-        /* Configuração do corpo da página */
-        html, body {
-            font-family: 'Open Sans', sans-serif;
-            width: 100%;
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            background-color: #f1f1f1;
-            color: #333;
-            line-height: 1.8;
-        }
-
-        *, *::before, *::after {
-            box-sizing: inherit;
-        }
-
-        /* Estilização do cabeçalho */
-        .top-box {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            width: 100%;
-            height: 100px;
-            background: linear-gradient(90deg, #0033cc, #007bff);
-            padding: 0 20px;
-            color: white;
-            font-size: 22px;
-            font-weight: bold;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .top-box img {
-            height: 80px;
-            margin-right: 20px;
-        }
-
-        /* Botão de voltar */
-        .login-icon {
-            text-decoration: none;
-            color: white;
-            font-size: 18px;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            background-color: rgba(255, 255, 255, 0.2);
-            padding: 8px 12px;
-            border-radius: 5px;
-            transition: background-color 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .login-icon:hover {
-            background-color: rgba(255, 255, 255, 0.4);
-            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
-        }
-
-        /* Menu responsivo */
-        .menu {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            background-color: #ff4444;
-            padding: 15px;
-            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
-        }
-
-        .menu a {
-            text-decoration: none;
-            color: white;
-            font-size: 16px;
-            font-weight: bold;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            transition: transform 0.2s ease, color 0.2s ease;
-        }
-
-        .menu a:hover {
-            transform: scale(1.1);
-            color: #ffcc00;
-        }
-
-        .menu a i {
-            font-size: 28px;
-            margin-bottom: 5px;
-        }
-
-        /* Área principal */
-        main {
-            padding: 20px;
-            max-width: 800px;
-            margin: 50px auto;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-            text-align: center;
-        }
-
-        .login-form h2 {
-            color: #007bff;
-        }
-
-        .login-form input {
-            width: 90%;
-            padding: 12px;
-            margin: 10px 0;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-
-        .login-form button {
-            width: 100%;
-            padding: 12px;
-            background-color: #ff4444;
-            color: white;
-            font-size: 18px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .login-form button:hover {
-            background-color: #cc0000;
-        }
-
-        /* Link de cadastro */
-        .login-form p {
-            margin-top: 15px;
-        }
-
-        .login-form a {
-            color: #007bff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        /* Rodapé */
-        footer {
-            width: 100%;
-            text-align: center;
-            padding: 15px;
-            background-color: #333;
-            color: white;
-            font-size: 14px;
-        }
-
-        /* Responsividade */
-        @media (max-width: 600px) {
-            .top-box {
-                flex-direction: column;
-                height: auto;
-                text-align: center;
-                padding: 15px;
-            }
-
-            .top-box img {
-                margin: 10px 0;
-            }
-
-            .menu {
-                flex-direction: column;
-                gap: 15px;
-                align-items: center;
-            }
-
-            main {
-                max-width: 90%;
-                padding: 15px;
-            }
-
-            .login-form input,
-            .login-form button {
-                font-size: 16px;
-                padding: 14px;
-            }
-        }
-        
-         /* Responsividade para tablets */
-        @media (max-width: 1024px) {
-            .top-box {
-                flex-direction: column;
-                height: auto;
-                text-align: center;
-                font-size: 18px;
-                padding: 10px;
-            }
-
-            .top-box img {
-                margin: 10px 0;
-            }
-
-            .menu {
-                flex-direction: column;
-                gap: 20px;
-                align-items: center;
-            }
-
-            main {
-                max-width: 95%;
-                padding: 20px;
-            }
-
-            .login-form input,
-            .login-form button {
-                font-size: 16px;
-                padding: 12px;
-            }
-        }
-        
-        /* Responsividade para telas muito pequenas */
-        @media (max-width: 480px) {
-            .top-box {
-                flex-direction: column;
-                height: auto;
-                text-align: center;
-                font-size: 18px;
-                padding: 10px;
-            }
-
-            .top-box img {
-                margin: 10px 0;
-            }
-
-            .menu{
-                font-size: 14px;
-            }
-
-            .menu a {
-                font-size: 14px;
-            }
-
-            main {
-                max-width: 80%;
-                padding: 10px;
-            }
-
-            .login-form input,
-            .login-form button {
-                font-size: 14px;
-                padding: 10px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
 
@@ -269,7 +23,7 @@
     </div>
 
     <!-- Menu de navegação -->
-    <nav class="menu">
+    <nav class="menu" >
         <a href="index.html"><i class="fas fa-home"></i> Início</a>
         <a href="#informacoes"><i class="fas fa-info-circle"></i> Informações</a>
         <a href="denuncia.html"><i class="fas fa-exclamation-triangle"></i> Denúncia</a>
@@ -277,7 +31,8 @@
     </nav>
 
     <!-- Formulário de login -->
-    <main class="login-form">
+    <main class="mainlogin">
+    <div class="login-form">
         <h2>Login</h2>
         <form action="#" method="POST">
             <input type="text" placeholder="Usuário" required>
@@ -285,6 +40,7 @@
             <button type="submit">Entrar</button>
         </form>
         <p>Não tem uma conta? <a href="cadastro.html">Cadastre-se</a></p>
+    </div>
     </main>
 
     <!-- Rodapé -->
